@@ -1,3 +1,4 @@
+// Primitive Data Types Homework (2/7/25)
 import java.util.Scanner;
 
 public class Input {
