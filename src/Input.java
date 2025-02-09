@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Input {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // Create a Scanner object
+        Scanner scanner = new Scanner(System.in); // Create a scanner object
 
         // Prompt the user for decimal
         System.out.print("Enter a decimal (double): ");
