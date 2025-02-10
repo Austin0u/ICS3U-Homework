@@ -8,13 +8,11 @@ public class QuadraticFormula {
 
     }
 
-    public static void quadraticFormula(double a, double b, double c) {
+    public static double[] quadraticFormula(double a, double b, double c) {
         double x1 = (-b + Math.sqrt(Math.pow(b,2)-(4*a*c)))/(2*a);
         double x2 = (-b - Math.sqrt(Math.pow(b,2)-(4*a*c)))/(2*a);
 
-        // Prints final roots
-        print("\nYour first root is: " + x1);
-        print("\nYour second root is: " + x2);
+        return new double[]{x1, x2};
     }
 
     public static void main (String[] arg) {
@@ -30,7 +28,11 @@ public class QuadraticFormula {
         print("Enter your c value: ");
         double c = scanner.nextDouble();
 
-        quadraticFormula(a,b,c); // calculates
+        double[] roots = quadraticFormula(a, b, c); // calculates
+
+        print("\nGiven the eqaution: " + a + "x^2 + " + b + "x + " + c + " = 0,");
+        print("\nYour first root is: " + roots[0]);
+        print("\nYour second root is: " + roots[1]);
 
         scanner.close();
     }
