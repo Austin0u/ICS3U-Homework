@@ -6,7 +6,7 @@ public class QuadraticFormula {
         // Print shortcut
         System.out.print(text);
     }
-
+    
     public static double[] calculateRoots(double a, double b, double c) {
         // Calculate each root and return as array
         return new double[] { 
@@ -30,12 +30,20 @@ public class QuadraticFormula {
         double c = scanner.nextDouble();
 
         double[] roots = calculateRoots(a, b, c); // calculates and returns roots as an array
+        double discriminant = Math.pow(b, 2) - (4 * a * c); // Calculates the discriminant
 
         // Prints the results
         print("\nGiven the eqaution: " + a + "x^2 + " + b + "x + " + c + " = 0,");
-        print("\nYour first root is: " + roots[0]);
-        print("\nYour second root is: " + roots[1]);
 
+        if (discriminant == 0) { // One real root
+            print("\nYour only root is: " +  (-b / (2 * a))); // Value for singular root
+        } else if (discriminant > 0) {
+            print("\nYour first root is: " + roots[0]);
+            print("\nYour second root is: " + roots[1]);
+        } else {
+            print("\nThere are no real roots.");
+        }
+        
         scanner.close();
     }
 }
