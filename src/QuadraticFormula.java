@@ -9,8 +9,8 @@ public class QuadraticFormula {
     }
 
     public static void quadraticFormula(double a, double b, double c) {
-        double x1 = (-b + Math.sqrt(Math.pow(b,2)-(4*a*c))/(2*a));
-        double x2 = (-b - Math.sqrt(Math.pow(b,2)-(4*a*c))/(2*a));
+        double x1 = (-b + Math.sqrt(Math.pow(b,2)-(4*a*c)))/(2*a);
+        double x2 = (-b - Math.sqrt(Math.pow(b,2)-(4*a*c)))/(2*a);
 
         // Prints final roots
         print("\nYour first root is: " + x1);
