@@ -47,3 +47,30 @@ public class QuadraticFormula {
         scanner.close();
     }
 }
+
+/* SIMPLE VERSION
+import java.util.Scanner;
+
+public class QuadraticFormula {
+    public static void main(String[] arg) {
+        // Declarations
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompts user for inputs
+        print("\nEnter your a value: ");
+        double a = scanner.nextDouble();
+
+        print("Enter your b value: ");
+        double b = scanner.nextDouble();
+
+        print("Enter your c value: ");
+        double c = scanner.nextDouble();
+
+        print("\nYour first root is: " + (-b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a)); // Value for root 1
+        print("\nYour second root is: " + (-b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a)); // Value for root 2
+        
+        
+        scanner.close();
+    }
+}
+ */
