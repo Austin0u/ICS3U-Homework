@@ -7,7 +7,7 @@ public class QuadraticFormula {
 
     }
 
-    public static double[] quadraticFormula(double a, double b, double c) {
+    public static double[] calculateRoots(double a, double b, double c) {
         // Calculate each root and return
         return new double[] { 
             (-b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a), // Value for root 1
@@ -29,7 +29,7 @@ public class QuadraticFormula {
         print("Enter your c value: ");
         double c = scanner.nextDouble();
 
-        double[] roots = quadraticFormula(a, b, c); // calculates and stores as an array
+        double[] roots = calculateRoots(a, b, c); // calculates and stores as an array
 
         // Prints the results
         print("\nGiven the eqaution: " + a + "x^2 + " + b + "x + " + c + " = 0,");
