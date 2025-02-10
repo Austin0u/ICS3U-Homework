@@ -8,10 +8,10 @@ public class QuadraticFormula {
     }
 
     public static double[] calculateRoots(double a, double b, double c) {
-        // Calculate each root and return
+        // Calculate each root and return as array
         return new double[] { 
             (-b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a), // Value for root 1
-            (-b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a)  // Vakye for root 2
+            (-b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a)  // Value for root 2
         };
     }
 
