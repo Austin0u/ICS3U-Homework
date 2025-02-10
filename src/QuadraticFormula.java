@@ -29,7 +29,7 @@ public class QuadraticFormula {
         print("Enter your c value: ");
         double c = scanner.nextDouble();
 
-        double[] roots = calculateRoots(a, b, c); // calculates and stores as an array
+        double[] roots = calculateRoots(a, b, c); // calculates and returns roots as an array
 
         // Prints the results
         print("\nGiven the eqaution: " + a + "x^2 + " + b + "x + " + c + " = 0,");
