@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class QuadraticFormula {
     private static void print(String text) {
+        // Print shortcut
         System.out.print(text);
-
     }
 
     public static double[] calculateRoots(double a, double b, double c) {
