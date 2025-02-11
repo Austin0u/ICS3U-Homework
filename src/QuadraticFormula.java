@@ -57,18 +57,17 @@ public class QuadraticFormula {
         Scanner scanner = new Scanner(System.in);
 
         // Prompts user for inputs
-        print("\nEnter your a value: ");
+        System.out.println("Enter your a value: ");
         double a = scanner.nextDouble();
 
-        print("Enter your b value: ");
+        System.out.print("Enter your b value: ");
         double b = scanner.nextDouble();
 
-        print("Enter your c value: ");
+        System.out.print("Enter your c value: ");
         double c = scanner.nextDouble();
 
-        print("\nYour first root is: " + (-b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a)); // Value for root 1
-        print("\nYour second root is: " + (-b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a)); // Value for root 2
-        
+        System.out.println("Your first root is: " + (-b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a)); // Value for root 1
+        System.out.println("Your second root is: " + (-b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a)); // Value for root 2
         
         scanner.close();
     }
