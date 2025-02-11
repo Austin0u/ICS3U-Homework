@@ -1,3 +1,4 @@
+// Sine Law Homework (2/11/25)
 import java.util.Scanner;
 
 public class SineLaw {
