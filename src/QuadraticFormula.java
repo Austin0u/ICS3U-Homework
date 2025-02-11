@@ -29,6 +29,8 @@ public class QuadraticFormula {
         print("Enter your c value: ");
         double c = scanner.nextDouble();
 
+        scanner.close();
+
         double[] roots = calculateRoots(a, b, c); // Calculates and returns roots as an array
 
         // Prints the results
@@ -42,8 +44,6 @@ public class QuadraticFormula {
         } else {
             print("\nThere are no real roots.");
         }
-        
-        scanner.close();
     }
 }
 
