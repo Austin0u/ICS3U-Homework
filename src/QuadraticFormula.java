@@ -30,14 +30,13 @@ public class QuadraticFormula {
         double c = scanner.nextDouble();
 
         double[] roots = calculateRoots(a, b, c); // Calculates and returns roots as an array
-        double discriminant = Math.pow(b, 2) - (4 * a * c); // Calculates the discriminant
 
         // Prints the results
-        print("\nGiven the eqaution: " + a + "x^2 + " + b + "x + " + c + " = 0,");
+        print("\nGiven the equation: " + a + "x^2 + " + b + "x + " + c + " = 0,");
 
-        if (discriminant == 0) { // One real root
+        if (roots[0] == roots[1]) { // One real root
             print("\nYour only root is: " +  (-b / (2 * a))); // Value for singular root
-        } else if (discriminant > 0) {
+        } else if (!Double.isNaN(roots[0]) && !Double.isNaN(roots[1])) { // Two real roots
             print("\nYour first root is: " + roots[0]);
             print("\nYour second root is: " + roots[1]);
         } else {
