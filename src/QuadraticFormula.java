@@ -1,4 +1,4 @@
-// Mathematical Ooperations Homework (2/10/25)
+// Mathematical Operations Homework (2/10/25)
 import java.util.Scanner;
 
 public class QuadraticFormula {
@@ -29,7 +29,7 @@ public class QuadraticFormula {
         print("Enter your c value: ");
         double c = scanner.nextDouble();
 
-        double[] roots = calculateRoots(a, b, c); // calculates and returns roots as an array
+        double[] roots = calculateRoots(a, b, c); // Calculates and returns roots as an array
         double discriminant = Math.pow(b, 2) - (4 * a * c); // Calculates the discriminant
 
         // Prints the results
