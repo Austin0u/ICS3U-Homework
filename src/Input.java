@@ -7,8 +7,6 @@ public class Input {
 
         // Prompt the user for decimal
         System.out.print("Enter a decimal (double): ");
-        int input = (int) scanner.nextDouble(); // Read the input (double) and cast as interger
-
         /*  
         Alternatively, you can use the following methods to read the input as an integer:
         
@@ -23,7 +21,7 @@ public class Input {
         */ 
         
         // Output the user input
-        System.out.println("Your input (double) as an integer is " + input);
+        System.out.println("Your input (double) as an integer is " + (int) scanner.nextDouble());
         scanner.close(); 
     }
 }
