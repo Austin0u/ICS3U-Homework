@@ -21,13 +21,13 @@ public class QuadraticFormula {
         Scanner scanner = new Scanner(System.in);
 
         // Prompts user for inputs
-        print("\nEnter your a value: ");
+        print("\nPlease enter your a value: ");
         double a = scanner.nextDouble();
 
-        print("Enter your b value: ");
+        print("Please enter your b value: ");
         double b = scanner.nextDouble();
 
-        print("Enter your c value: ");
+        print("Please enter your c value: ");
         double c = scanner.nextDouble();
 
         scanner.close();
