@@ -17,7 +17,7 @@ public class CosineLaw {
 
         keyboard.close();
 
-        // Calculates angle 
+        // Calculates side value (Cosine law) 
         double SideC = Math.sqrt(Math.pow(sideA,2)+Math.pow(sideB,2)-2*sideA*sideB*Math.cos(Math.toRadians(angleC)));
 
         // Outputs result
