@@ -1,3 +1,4 @@
+// Cosine Law Homework (2/12/25)
 import java.util.Scanner;
 
 public class CosineLaw {

@@ -15,6 +15,6 @@ public class NANDGate {
         keyboard.close();
 
         // Outputs NAND result
-        System.out.println("Your c value is " + !(a && b));
+        System.out.println("a NAND b is " + !(a && b));
     }
 }
