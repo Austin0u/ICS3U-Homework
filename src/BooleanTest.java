@@ -17,7 +17,7 @@ public class BooleanTest {
         keyboard.close();
 
         // Calculates and prints output result
-        Boolean output = ((a && b) || (c && d)) || ((a && c) || (a && d)) || ((b && d) || (b && c));
+        Boolean output = a && b || c && d || a && c || a && d || b && d || b && c;
         System.out.println("The output value is " + output);
     }
 }
