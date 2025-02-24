@@ -25,7 +25,7 @@ public class AsymptoteFinder {
         } else if (m > n) {
             String name;
 
-            // Gives name based on degree difference
+            // Gives name based on degree difference (can also use a list of strings)
             switch (m - n) {
                 case 1:
                     name = "Linear";
