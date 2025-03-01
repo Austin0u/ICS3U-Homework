@@ -1,4 +1,3 @@
-
 // Asymptote Finder Homework (2/21/25)
 import java.util.Scanner;
 

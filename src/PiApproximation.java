@@ -1,4 +1,3 @@
-
 // Loops Homework (2/25/25)
 import java.util.Scanner;
 
