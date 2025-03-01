@@ -2,20 +2,29 @@
 import java.util.Scanner;
 
 public class ISBNChecker {
+    private static boolean checkDigits(String number) {
+        for (int i = 0; i < 13; i++) {
+            if (!Character.isDigit(number.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
 
         // Takes input from user
         System.out.print("Please enter an ISBN number (13 Digits): ");
-        String code = keyboard.next();
+        String number = keyboard.next();
         keyboard.close();
 
-        // Checks length of code
-        if (code.length() == 13) {
+        // Checks length of number
+        if (number.length() == 13 && checkDigits(number)) {
             int sum = 0;
 
             for (int i = 0; i < 13; i++) {
-                int digit = code.charAt(i) - '0'; // Converts the digit into the correct integer
+                int digit = number.charAt(i) - '0'; // Converts the digit into the correct integer
 
                 if (i % 2 == 0) { // iteration is even (0, 2, 4, 6), actual digit is odd
                     sum += digit;
@@ -24,16 +33,15 @@ public class ISBNChecker {
                 }
             }
 
-            // Checks if sum is a factor of 10
+            // Checksum (sum is a factor of 10)
             if (sum % 10 == 0) {
                 System.out.println("This ISBN number is valid");
             } else {
-                System.out.println("This ISBN number is not valid");
+                System.out.println("This ISBN number is invalid: Checksum");
             }
 
         } else {
-            System.out.println("The number does not have 13 digits");
+            System.out.println("The ISBN number is invalid: Length != 13 or contains non-digits");
         }
     }
-
 }
