@@ -1,7 +1,7 @@
 // Arrays Homework #2 (3/5/25)
 import java.util.Scanner;
 
-public class PolynomialEvaluator {
+public class PolynomialFunction {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         String polynomial = "f(x) =";
