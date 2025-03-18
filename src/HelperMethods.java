@@ -44,7 +44,7 @@ public class HelperMethods {
                     "Nonic", "Decic" };
 
             // Gives name based on degree difference (can also use a list of strings
-            System.out.println("The asymptote is " + ((m - n > 0 && m - n <= 10) ? names[m - n] : "N/S"));
+            System.out.println("The asymptote is " + ((m - n > 0 && m - n <= 10) ? names[m - n] : "N/A"));
         }
     }
 
@@ -103,7 +103,7 @@ public class HelperMethods {
                         break;
                 default: // retries if invalid
                     System.out.println("Invalid input. Please try again.");
-                    break;
+                    continue;
             }
 
             // Asks to try again
