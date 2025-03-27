@@ -3,55 +3,56 @@
 import java.io.FileWriter;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class FileIO {
-    public static void main(String[] args) {
-        // Variables to calculate avg
-        double sum = 0;
+    public static void main(String[] args) throws IOException {
+        double sum = 0.0;
         int count = 0;
 
-        // Reading
         BufferedReader inputStream = null;
+        FileWriter outputStream = null;
+
         String line = null;
 
+        System.out.println("-----------------------------------"); // DEBUG
+
         try {
+            System.out.println("Attempting to read numbers.txt"); // DEBUG
+
             inputStream = new BufferedReader(new FileReader("numbers.txt"));
+            outputStream = new FileWriter("average.txt");
+
             while ((line = inputStream.readLine()) != null) {
                 sum += Double.parseDouble(line);
                 count++;
+                System.out.println("> Line " + count + ": " + line); // DEBUG
+                if (line.contains("1")) {
+                    System.out.println("\t > 1 found!!");
+                }
             }
-        } catch (IOException exception) {
+
+            System.out.println("-----------------------------------"); // DEBUG
+
+            System.out.println("Attempting to write to average.txt"); // DEBUG
+            outputStream.write("The average is " + sum / count);
+            System.out.println("> The average is " + sum / count); // DEBUG
+
+        } catch (FileNotFoundException exception) {
             System.out.println("Error opening file");
+        } catch (IOException exception) {
+            System.out.println("Error creating file");
         } finally {
             if (inputStream != null) {
-                try {
-                    inputStream.close();
-                } catch (IOException e) {
-                    System.out.println("Error closing input file");
-                }
+                inputStream.close();
             }
 
-        }
-        
-        // Write
-        FileWriter outputStream = null;
-
-        try {
-            outputStream = new FileWriter("average.txt");
-            outputStream.write("The average is " + sum / count);
-        } catch (IOException exception) {
-            System.out.println("Error opening or writing to file");
-        } finally {
             if (outputStream != null) {
-                try {
-                    outputStream.close();
-                } catch (IOException e) {
-                    System.out.println("Error closing file");
-                }
-    
+                System.out.println("-----------------------------------"); // DEBUG
+                System.out.println("Closing Program..."); // DEBUG
+                outputStream.close();
             }
         }
-
     }
 }
