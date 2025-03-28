@@ -7,14 +7,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class FileIO {
-    public static void main(String[] args) throws IOException {
-        double sum = 0.0;
-        int count = 0;
-
+    public static void main(String[] args) throws Exception {
         BufferedReader inputStream = null;
         FileWriter outputStream = null;
-
-        String line = null;
+        String line = "";
+        double sum = 0.0;
+        int count = 0;
 
         System.out.println("-----------------------------------"); // DEBUG
 
@@ -28,9 +26,6 @@ public class FileIO {
                 sum += Double.parseDouble(line);
                 count++;
                 System.out.println("> Line " + count + ": " + line); // DEBUG
-                if (line.contains("1")) {
-                    System.out.println("\t > 1 found!!");
-                }
             }
 
             System.out.println("-----------------------------------"); // DEBUG
@@ -39,9 +34,9 @@ public class FileIO {
             outputStream.write("The average is " + sum / count);
             System.out.println("> The average is " + sum / count); // DEBUG
 
-        } catch (FileNotFoundException exception) {
+        } catch (FileNotFoundException e) {
             System.out.println("Error opening file");
-        } catch (IOException exception) {
+        } catch (IOException e) {
             System.out.println("Error creating file");
         } finally {
             if (inputStream != null) {
