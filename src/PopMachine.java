@@ -43,7 +43,7 @@ public class PopMachine {
         double change = insertedMoney;
 
         if (change == 0) {
-            System.out.println("No change to return.");
+            System.out.println("> No change to return.");
         } else {
             insertedMoney = 0; // Reset the inserted money after returning it
         }
@@ -55,7 +55,7 @@ public class PopMachine {
         System.out.println("==========INFO===========");
         System.out.println("- balance = $" + amountOfMoney);
         System.out.println("- pop amount = " + numberOfPop);
-        System.out.println("- Set price = $" + priceOfPop);
+        System.out.println("- price = $" + priceOfPop);
         System.out.println("==========================");
     }
 
