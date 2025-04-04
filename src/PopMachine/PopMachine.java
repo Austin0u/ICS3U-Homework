@@ -1,14 +1,17 @@
-public class PopMachine {
-    private double priceOfPop;
-    private double amountOfMoney;
-    private int numberOfPop;
+package PopMachine;
 
-    private double insertedMoney = 0.0;
+public class PopMachine {
+    double priceOfPop;
+    double amountOfMoney;
+    int numberOfPop;
+
+    double insertedMoney;
 
     public PopMachine(int numberOfPop, double amountOfMoney, double priceOfPop) {
         this.numberOfPop = numberOfPop;
         this.amountOfMoney = amountOfMoney;
         this.priceOfPop = priceOfPop;
+        this.insertedMoney = 0;
     }
 
     public void coinSlot(double money) {
