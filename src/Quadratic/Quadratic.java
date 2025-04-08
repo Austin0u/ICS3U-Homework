@@ -1,9 +1,9 @@
 package Quadratic;
 
 public class Quadratic {
-    double a;
-    double b;
-    double c;
+    private double a;
+    private double b;
+    private double c;
 
     public Quadratic(double a, double b, double c) { // Constrcuts a Quadratic equation with the given exponents
         this.a = a; // Coefficient of x^2
@@ -56,7 +56,7 @@ public class Quadratic {
                 (-b - Math.sqrt(discriminant)) / (2 * a) // Value for root 2
             };
         } else { // No real roots
-            return new double[] {0, 0}; // Placeholder values
+            return null;
         }
     }
 
@@ -81,7 +81,7 @@ public class Quadratic {
     public void getFactoredForm() { // Prints the quadratic equation in factored form.
         double[] roots = getRoots();
 
-        if (roots[0] == 0 && roots[1] == 0) { // No real roots
+        if (roots == null) { // No real roots
             System.out.println("No Factored Form (No Real Roots)");
         } else if (roots[0] == roots[1]) { // One root
             System.out.println(
@@ -107,10 +107,6 @@ public class Quadratic {
 
     public boolean isMaximum() { // Determines if the quadratic function has a maximum point.
         return (a < 0); 
-    }
-
-    public double getXIntercept() { // Computes the x-intercepts of the quadratic equation, if they exist.
-        return 0.0; // ???????
     }
 
     public double getYIntercept() { // Computes the y-intercept of the quadratic equation.
