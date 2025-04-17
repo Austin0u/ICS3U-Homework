@@ -1,4 +1,3 @@
-
 // File IO Homework (3/25/25)
 import java.io.FileWriter;
 import java.io.BufferedReader;
