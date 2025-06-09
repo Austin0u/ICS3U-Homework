@@ -1,3 +1,4 @@
+package Recursion;
 public class Factorial {
     public static int factorial(int number) {
         if (number < 1) {
